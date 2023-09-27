@@ -1,0 +1,38 @@
+<div>
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <% if(msg !="" ){ %>
+                            <h2 class="authError">
+                                <%= msg %>
+                            </h2>
+                            <% } %>
+                                <form action="/registration/auth" method="POST">
+                                    <div class="form-outline mb-4">
+                                        <input class="form-control form-control-lg" type="text" name="username"
+                                            id="typeEmailX-2">
+                                        <label class="form-label" for="username">Podaj Nazwę użytkownika</label>
+
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input class="form-control form-control-lg" type="email" name="email"
+                                            id="typeEmailX-2">
+                                        <label class="form-label" for="email">Podaj Email użytkownika</label>
+
+                                    </div>
+                                    <div class="form-outline mb-4">
+                                        <input class="form-control form-control-lg" type="password" name="password"
+                                            id="typePasswordX-2">
+                                        <label class="form-label" for="password">Podaj Hasło użytkownika</label>
+
+                                    </div>
+                                    <input class="btn btn-primary" type="submit">
+                                </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

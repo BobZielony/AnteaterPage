@@ -1,0 +1,23 @@
+
+
+<div>
+  <h3>Data ostatnich odwiedzin: <%=userInfo.lastLogin%></h3>
+  <h4>Odwiedziny poszczególnych stron</h4>
+  <ul class="list-group list-group-horizontal">
+    <% if(numberOfVisits != undefined){ %> <%
+    Object.keys(numberOfVisits).forEach(function(key) {%>
+    <button class="btn btn-primary list-group-item" disabled><%=key%> <span class="badge bg-danger"><%=numberOfVisits[key]%></span></button>
+  
+    <%});} %>
+  </ul>
+  <dl class="list-group">
+    <% anteaterData.forEach((anteater) => {%>
+    <dt class="list-group-item"><%=anteater.name%></dt>
+    <dd class="list-group-item">
+      <form action="/anteater/<%=anteater.name%>">
+        <button>Przejdź do podstrony mrówkojada</button>
+      </form>
+    </dd>
+    <%}); %>
+  </dl>
+</div>
